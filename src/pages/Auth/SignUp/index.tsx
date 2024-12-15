@@ -112,10 +112,6 @@ const Signup = () => {
                           type='button'
                           className='absolute right-6 top-1/2 -translate-y-1/2'
                           onClick={() => {
-                            console.log({
-                              ...passwordType,
-                              us_password: !passwordType.us_password,
-                            });
                             setPasswordType({
                               ...passwordType,
                               us_password: !passwordType.us_password,
@@ -155,11 +151,6 @@ const Signup = () => {
                           type='button'
                           className='absolute right-6 top-1/2 -translate-y-1/2'
                           onClick={() => {
-                            console.log({
-                              ...passwordType,
-                              us_confirm_password:
-                                !passwordType.us_confirm_password,
-                            });
                             setPasswordType({
                               ...passwordType,
                               us_confirm_password:

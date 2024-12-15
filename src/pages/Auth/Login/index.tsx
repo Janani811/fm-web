@@ -44,10 +44,10 @@ const Login = () => {
       navigate('/home');
     } catch (err: unknown) {
       const knownError = err as ValidationErrors;
-      if (knownError.error)
+      if (knownError.message)
         toast({
           variant: 'destructive',
-          title: knownError.error,
+          title: knownError.message,
           duration: 2000,
         });
     }
@@ -58,7 +58,7 @@ const Login = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className='space-y-7 rounded-2xl border p-12 shadow-lg sm:w-3/4 md:w-2/4 lg:w-2/4 xl:max-w-screen-sm'
+          className='space-y-7 rounded-2xl border p-12 shadow-lg sm:w-3/4 md:w-3/4 lg:w-[500px] xl:max-w-screen-sm'
         >
           <div className='mb-12 flex flex-col items-center gap-3'>
             <div className='text-center text-4xl font-bold'>Welcome back</div>
