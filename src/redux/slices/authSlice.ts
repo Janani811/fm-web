@@ -49,7 +49,7 @@ const authSlice = createSlice({
       })
       .addCase(logIn.rejected, (state, action) => {
         if (action.payload) {
-          state.error = action.payload.error;
+          state.error = action.payload.message;
         } else {
           state.error = action.error.message;
         }
@@ -113,7 +113,6 @@ export const logIn = createAsyncThunk<
       if (!error.response) {
         throw err;
       }
-      console.log(error.response.data);
       return rejectWithValue(error.response.data);
     }
   }

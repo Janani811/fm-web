@@ -7,4 +7,5 @@ export interface User {
 export interface ValidationErrors {
   error: string;
   field_errors: Record<string, string>;
+  message: string;
 }

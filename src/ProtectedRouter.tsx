@@ -12,12 +12,14 @@ const ProtectedRoute = ({ isPublic }: { isPublic?: boolean }) => {
     if (!user) {
       dispatch(fetchProfile());
     }
-  }, [user]);
+  }, [dispatch, user]);
 
   if (isAuthenticated && !user) {
-    <div className='flex h-screen items-center justify-center'>
-      <Loader2 className='animate-spin' size={70} />
-    </div>;
+    return (
+      <div className='flex h-screen items-center justify-center'>
+        <Loader2 className='animate-spin' size={70} />
+      </div>
+    );
   }
 
   if (isPublic) {

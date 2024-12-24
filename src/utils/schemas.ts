@@ -6,8 +6,8 @@ export const loginSchema = z.object({
     .string()
     .min(1, { message: 'This field has to be filled.' })
     .email('Not a valid email address.'),
-  us_password: z.string().min(8, {
-    message: 'Password must be at least 8 characters.',
+  us_password: z.string().min(1, {
+    message: 'Password must be at least 1 characters.',
   }),
 });
 
@@ -17,7 +17,7 @@ export const signupSchema = z
     us_email: z
       .string()
       .min(1, { message: 'Email should not be empty' })
-      .email('TNot a valid email address.'),
+      .email('Not a valid email address.'),
     us_password: z.string().min(8, {
       message: 'Password must be at least 8 characters.',
     }),
