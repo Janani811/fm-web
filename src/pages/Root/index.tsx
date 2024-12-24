@@ -4,7 +4,9 @@ import { Outlet } from 'react-router-dom';
 export const Root = () => {
   return (
     <>
-      <Navbar />
+      <div className='flex w-full justify-center'>
+        <Navbar />
+      </div>
       <Outlet />
     </>
   );
