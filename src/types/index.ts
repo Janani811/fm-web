@@ -9,3 +9,14 @@ export interface ValidationErrors {
   field_errors: Record<string, string>;
   message: string;
 }
+
+export interface IError {
+  _id: string;
+  er_title: string;
+  er_description: object;
+  er_created_by: string;
+  er_tags: string[];
+  er_attachments: string[];
+  er_is_deleted: number;
+  er_created_at: Date;
+}
