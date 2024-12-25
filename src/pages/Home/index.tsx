@@ -1,16 +1,11 @@
-import Editor from '@/components/Editor';
+import CreateProblem from './CreateProblem';
 
 export const Home = () => {
   return (
-    <div className='mt-6 flex w-full flex-col items-center justify-center'>
-      <div className='mb-5 text-2xl'>Welcome to FixMate APP</div>
-      <div className='w-7/12'>
-        <Editor
-          onChange={(value) => {
-            console.log(value);
-          }}
-          editable
-        />
+    <div className='mt-6 flex w-full items-center justify-center'>
+      <div className='flex w-10/12 items-center justify-between'>
+        <div>Home page </div>
+        <CreateProblem />
       </div>
     </div>
   );

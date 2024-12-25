@@ -64,7 +64,7 @@ const problemSlice = createSlice({
 
 export const { setError, setIsLoading, setProblemList } = problemSlice.actions;
 
-// createProblem
+// Create Problem
 export const createProblem = createAsyncThunk<
   IError,
   { er_title: string; er_description: string; er_tags?: string[] },
@@ -90,7 +90,7 @@ export const createProblem = createAsyncThunk<
   }
 );
 
-// Fetch profile
+// Fetch Problems
 export const getProblems = createAsyncThunk<IError[]>(
   'error/list',
   async (_, { rejectWithValue }) => {

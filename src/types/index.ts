@@ -13,7 +13,7 @@ export interface ValidationErrors {
 export interface IError {
   _id: string;
   er_title: string;
-  er_description: object;
+  er_description: string;
   er_created_by: string;
   er_tags: string[];
   er_attachments: string[];

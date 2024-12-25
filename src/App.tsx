@@ -13,6 +13,7 @@ import { Home } from '@/pages/Home';
 import ProtectedRoute from '@/ProtectedRouter';
 import { Root } from '@/pages/Root';
 import NotFound from '@/pages/NotFound';
+import SolutionsHub from './pages/SolutionsHub';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,6 +30,7 @@ const router = createBrowserRouter(
         {/* Protected routes */}
         <Route element={<ProtectedRoute />}>
           <Route path='home' element={<Home />} />
+          <Route path='solution' element={<SolutionsHub />} />
         </Route>
       </Route>
     </>

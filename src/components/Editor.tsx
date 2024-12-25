@@ -27,7 +27,6 @@ export default function Editor({
   const editor = useCreateBlockNote({ initialContent: blocks });
 
   const emitValue = useCallback(() => {
-    console.log('first');
     if (onChange) {
       setBlocks(editor.document);
       setTimeout(() => {
@@ -40,6 +39,7 @@ export default function Editor({
     <div className='size-full'>
       <BlockNoteView
         className='min-h-16'
+        // theme='light'
         editable={editable}
         editor={editor}
         sideMenu={true}
